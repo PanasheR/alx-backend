@@ -26,7 +26,7 @@ class LFUCache(BaseCaching):
                 if len(self.cache_data) >= self.MAX_ITEMS:
                     min_val = min(self.frequency.values())
                     min_kys = [k for k in self.frequency
-                                if self.frequency[k] == min_val]
+                               if self.frequency[k] == min_val]
                     for i in range(len(self.lfu_order)):
                         if self.lfu_order[i] in min_kys:
                             break
